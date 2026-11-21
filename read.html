@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open secret · SecretBox</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="shell"><div class="brand"><span class="mark">▣</span><span>SecretBox</span></div>
+<section class="panel"><div class="eyebrow">ONE-TIME SECRET</div><h1>A message<br><em>is waiting.</em></h1>
+<p class="muted">Enter the password to reveal it. Once successfully opened, this secret is deleted and cannot be viewed again.</p>
+<label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Enter password">
+<button id="open">Unlock secret <span>↗</span></button><div id="error" class="error" role="alert"></div>
+<div id="secret" class="secret" hidden></div></section><footer>SecretBox · Minimal, private sharing</footer></main>
+<script>window.SECRET_TOKEN={{ token|tojson }};</script><script src="/static/read.js"></script></body></html>

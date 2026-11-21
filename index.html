@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SecretBox</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="shell"><div class="brand"><span class="mark">▣</span><span>SecretBox</span></div>
+<section class="panel"><div class="eyebrow">PRIVATE · ONE-TIME</div><h1>Send a secret.<br><em>Not a conversation.</em></h1>
+<p class="muted">Create a password-protected link. The secret is deleted when it is successfully opened.</p>
+<label for="message">Your message</label><textarea id="message" rows="5" maxlength="10000" placeholder="Write something private…"></textarea>
+<label for="password">Opening password</label><input id="password" type="password" maxlength="256" placeholder="Set a password">
+<button id="create">Create one-time link <span>↗</span></button>
+<div id="result" class="result" hidden><p>Your secret link is ready. Share it separately from the password.</p><div class="linkrow"><input id="link" readonly><button class="copy" id="copy">Copy</button></div><small>Anyone with the link and password can open it once. Keep the password private.</small></div>
+<div id="error" class="error" role="alert"></div></section>
+<footer>SecretBox · Minimal, private sharing</footer></main><script src="/static/app.js"></script></body></html>
