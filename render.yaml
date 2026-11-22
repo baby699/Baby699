@@ -1,20 +1,17 @@
+
 services:
   - type: web
     name: secretbox
     runtime: docker
     plan: free
     healthCheckPath: /health
-    disk:
-      name: secretbox-data
-      mountPath: /data
-      sizeGB: 1
     envVars:
       - key: APP_SECRET
         generateValue: true
       - key: FERNET_KEY
         generateValue: true
       - key: DB_PATH
-        value: /data/secretbox.sqlite3
+        value: /tmp/secretbox.sqlite3
       - key: MAX_AGE_HOURS
         value: "168"
       - key: PUBLIC_BASE_URL
